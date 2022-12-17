@@ -29,7 +29,7 @@ module Jekyll
         @posts  = posts
         @type   = type
         @title  = title
-        @config = site.config["jekyll-archives"]
+        @config = site.config["jekyll-archives1"]
         @slug   = slugify_string_title
 
         # Use ".html" for file extension and url for path

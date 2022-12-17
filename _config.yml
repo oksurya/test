@@ -190,19 +190,11 @@ exclude:
   - node_modules
   - package*.json
 
-
-
 jekyll-archives:
-  enabled:
-    - cast
-    - director
-    - genre
-    - categories
-    - tags
-  layout: collection
-  permalinks: 
-    cast: '/cast/:name.html'
-    director: '/director/:name.html'
-    genre: '/genre/:name.html'
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
     tag: /tags/:name/
     category: /categories/:name/

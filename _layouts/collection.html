@@ -28,13 +28,7 @@
                             <a itemprop="url" href="{{post.url | prepend: site.baseurl}}" rel="bookmark" title="{{post.title}} movie download">
                             <div>
                             <div class="ava" style=" height: 130px; ">
-                            <picture>
-                                {% if post.poster %}
-                                <img alt="{{post.title}} movie poster" title="{{post.title}} Movie Poster" src="{{post.poster}}" loading="lazy">
-                              {% else %}
-                              <img alt="no movie poster" title="Default Poster" src="https://via.placeholder.com/150x200/000000/FFFFFF?text={{post.title}}" loading="lazy">
-                              {% endif %}
-                            </picture>
+                            
                             </div>
                             <div class="info">
                             <h2 itemprop="name">{{post.title}}</h2>

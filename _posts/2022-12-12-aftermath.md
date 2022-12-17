@@ -9,7 +9,7 @@ poster: /assets/uploads/rp9emk.md.jpg
 genre:
   - Thriller
   - Drama
-year: "2017"
+year: "2017s"
 language: Tamil Dubbed
 cast:
   - Ashley Greenes

@@ -199,12 +199,7 @@ jekyll-archives:
     - genre
     - categories
     - tags
-  layout:
-    category: category
-    tag: tag
-    genre: collection
-    director: collection
-    cast: collection
+  layout: collection
   permalinks: 
     cast: '/cast/:name.html'
     director: '/director/:name.html'

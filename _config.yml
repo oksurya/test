@@ -191,12 +191,31 @@ exclude:
   - package*.json
 
 jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
+
+jekyll-archives:
   enabled:
     - cast
     - director
     - genre
-  layout: collection
+    - categories
+    - tags
+  layout:
+    category: category
+    tag: tag
+    genre: collection
+    director: collection
+    cast: collection
   permalinks: 
     cast: '/cast/:name.html'
     director: '/director/:name.html'
     genre: '/genre/:name.html'
+    tag: /tags/:name/
+    category: /categories/:name/

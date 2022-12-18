@@ -34,6 +34,18 @@ theme: minima
 plugins:
   - jekyll-feed
 
+
+jekyll-archives:
+  enabled:
+    - cast
+    - director
+    - genre
+  layout: collection
+  permalinks: 
+    cast: '/cast/:name.html'
+    director: '/director/:name.html'
+    genre: '/genre/:name.html'
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

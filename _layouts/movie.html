@@ -1,0 +1,49 @@
+{% if page.genre.size > 0 %}
+        {% for genre in page.genre %}
+
+
+        
+
+
+        <span itemprop="genre"><a href='{{ site.url }}/genre/{{ genre | slugify | url_encode | append: ".html"}}'>{{ genre }}</a></span>
+        
+        {%- unless forloop.last -%}, {%- endunless -%}
+        {% endfor %}
+        {% endif %}
+        <br>
+
+
+{% if page.cast %}
+
+        <b>Cast:</b>
+
+        {% if page.cast.size > 0 %}
+        {% for cast in page.cast %}
+
+        <span itemprop="actor"><a href='{{ site.url }}/cast/{{ cast | slugify | url_encode | append: ".html"}}'>{{ cast }}</a></span>
+        
+        {%- unless forloop.last -%}, {%- endunless -%}
+        {% endfor %}
+        {% endif %}
+
+        <br>
+        {% endif %}
+
+
+
+        {% if page.director %}
+
+        <b>Director:</b>
+
+        {% if page.director.size > 0 %}
+        {% for director in page.director %}
+
+    
+        <span itemprop="director"><a href='{{ site.url }}/director/{{ director | slugify | url_encode | append: ".html"}}'>{{ director }}</a></span>
+
+        {%- unless forloop.last -%}, {%- endunless -%}
+        {% endfor %}
+        {% endif %}
+
+        <br>
+        {% endif %}

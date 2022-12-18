@@ -18,7 +18,7 @@ module Jekyll
           "year"     => "/:year/",
           "month"    => "/:year/:month/",
           "day"      => "/:year/:month/:day/",
-          "cast"      => "/cast/:name/",
+          "tag"      => "/tag/:name/",
           "category" => "/category/:name/",
         },
       }.freeze
@@ -42,11 +42,20 @@ module Jekyll
 
       # Read archive data from posts
       def read
+        read_tags
         read_cast
         read_genre
         read_director
         read_categories
         read_dates
+      end
+
+      def read_tags
+        if enabled? "tags"
+          tags.each do |title, posts|
+            @archives << Archive.new(@site, title, "tag", posts)
+          end
+        end
       end
 
       def read_cast
@@ -99,6 +108,11 @@ module Jekyll
         @config["enabled"] == true || @config["enabled"] == "all" || if @config["enabled"].is_a? Array
                                                                        @config["enabled"].include? archive
                                                                      end
+      end
+
+
+      def tags
+        @site.tags
       end
 
       def cast

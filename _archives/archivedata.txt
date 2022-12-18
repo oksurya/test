@@ -1,0 +1,17 @@
+{
+"cast": [
+    {%- for cast in site.cast -%}
+    "{{ cast[0]}}"{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+],
+"director": [
+    {%- for director in site.director -%}
+    "{{ director[0] }}"{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+],
+"genre": [
+    {%- for genre in site.genre -%}
+    "{{ genre[0] }}"{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+]
+}
